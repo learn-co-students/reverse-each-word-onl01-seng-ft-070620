@@ -1,19 +1,23 @@
-## code below
+### code below
+
+
+# using .collect method:
 
 def reverse_each_word(phrase)
-    rev_arr = []
-    splitz = phrase.split(" ")
-    splitz.collect do |word| 
-        rev_arr << word.reverse
-    end 
-    rev_arr.join(" ")
-
+    phrase.split.collect do |word| 
+        word.reverse
+    end
+        .join(" ")
 end 
 
+
+
+# using .each method:
+
 # def reverse_each_word(phrase)
-#     splitz = phrase.split(" ") #put phrase into an array
-#     splitz.collect do |word|  #reverse each word in array
-#         word.reverse 
-#         # display contents of array 
+#     new_array = []
+#     phrase.split.each do |word| 
+#         new_array << word.reverse
 #     end
+#         new_array.join(" ")
 # end 
